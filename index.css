@@ -20,3 +20,8 @@ h1 {
 div.cup > img {
     width: 64px;
 }
+
+img.selected {
+    transform: translate(-25px, -50px) rotate(-45deg);
+    transition: transform 2s;
+}
