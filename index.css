@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+}
+
+#startButton {
+    margin: auto;
+    display: block;
+}
+
+#game {
+    display: none;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 50px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+div.cup > img {
+    width: 64px;
+}
