@@ -53,6 +53,11 @@ function startGame() {
     // Step 2 : Cacher le bouton START.
     var startBtn = document.getElementById("startButton");
     startBtn.style.display = "none";
+
+    // Step 3 : Cacher le trésor derrière un gobelet
+    // Générer un nombre aléatoire qui est soit 0, 1, ou 2.
+    var randomIndex = Math.round(Math.random() * 2);
+    setTreasure(randomIndex);
 }
 
 /*
@@ -65,4 +70,17 @@ function selectCup(evt) {
     console.log("Le joueur a choisi : ", selectedIndex);
 
     selectedImage.classList.add("selected");
+}
+
+function setTreasure(index) {
+    // Il faut retrouver le gobelet derrière lequel cacher le trésor.
+    var cupId = "cup-" + index;
+    var winnerCup = document.getElementById(cupId);
+    // On construit l'image du trésor.
+    var img = document.createElement("img");
+    img.src = "images/treasure.png";
+    img.width = "48";
+    img.id = "treasure";
+    // On ajoute le trésor juste avant le gobelet pour qu'il soit caché derrière.
+    winnerCup.insertAdjacentElement("beforebegin", img);
 }

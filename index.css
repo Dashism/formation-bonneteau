@@ -17,6 +17,12 @@ h1 {
     border-radius: 10px;
 }
 
+div.cup {
+    position: relative;
+    width: 64px;
+    height: 100px;
+}
+
 div.cup > img {
     width: 64px;
 }
@@ -24,4 +30,14 @@ div.cup > img {
 img.selected {
     transform: translate(-25px, -50px) rotate(-45deg);
     transition: transform 2s;
+}
+
+img {
+    position: absolute;
+}
+
+img#treasure {
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
